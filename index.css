@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .image {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #724C99;
+}
+
+header .top-bar {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+}
+
+header .top-bar .container {
+  padding: 20px;
+}
+
+header .top-bar .container nav > ul > li {
+  margin-right: 20px;
+}
+
+header .top-bar .container nav > ul > li > a {
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+  position: relative;
+}
+
+header .top-bar .container nav > ul > li > a:after {
+  position: absolute;
+  top: 45px;
+  left: 0px;
+  content: "";
+  width: 0;
+  height: 4.5px;
+  background: #724C99;
+}
+
+header .top-bar .container nav > ul > li > a:hover {
+  color: #724C99;
+}
+
+header .top-bar .container nav > ul > li > a:hover:after {
+  width: 100%;
+}
+
+header .top-bar .container nav > ul > li .drop-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #fff;
+  color: #333;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  padding: 0;
+}
+
+header .top-bar .container nav > ul > li .drop-down li {
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+}
+
+header .top-bar .container nav > ul > li .drop-down li:hover {
+  background: #724C99;
+}
+
+header .top-bar .container nav > ul > li .drop-down li:hover a {
+  color: #fff;
+}
+
+header .top-bar .container nav > ul > li .drop-down li a {
+  font-size: 16px;
+  padding: 10px 0;
+}
+
+header .top-bar .container nav > ul > li .drop-down li:first-child {
+  border-radius: 4px 4px 0px 0px;
+}
+
+header .top-bar .container nav > ul > li .drop-down li:last-child {
+  border-radius: 0px 0px 4px 4px;
+}
+
+header .top-bar .container nav > ul li.li-dropdown {
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+  position: relative;
+}
+
+header .top-bar .container nav > ul li.li-dropdown:hover a {
+  text-decoration: none;
+  text-align: center;
+}
+
+header .top-bar .container nav > ul li.li-dropdown:hover .drop-down {
+  opacity: 1;
+  visibility: visible;
+}
+
+.totop {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  color: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  position: fixed;
+  bottom: -5px;
+  right: 50px;
+  z-index: 999;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.totop i {
+  font-size: 22px;
+  font-family: 700;
+}
+
+.totop.appear {
+  opacity: 1;
+  bottom: 60px;
+}
+/*# sourceMappingURL=index.css.map */
