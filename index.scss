@@ -1,146 +1,63 @@
-                * {
-                    margin: 0;
-                    padding: 0;
-                    li {
-                        list-style: none;
-                    }
-                }
-                
-                a {
-                    text-decoration: none;
-                }
-                
-                button {
-                    border: none;
-                    outline: none;
-                }
-                
-                .container {
-                    max-width: 1200px;
-                    margin: 0 auto;
-                }
-                
-                .flex {
-                    display: flex;
-                    flex-wrap: nowrap;
-                    justify-content: space-between;
-                }
-                
-                header {
-                    .image {
-                        width: 100%;
-                        display: flex;
-                        justify-content: center;
-                        background: #724C99;
-                    }
-                    .top-bar {
-                        position: absolute;
-                        top: 20px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        z-index: 2;
-                        .container {
-                            padding: 20px;
-                            nav {
-                                >ul {
-                                    >li {
-                                        margin-right: 20px;
-                                        >a {
-                                            color: #fff;
-                                            font-weight: 400;
-                                            font-size: 20px;
-                                            transition: 0.4s all;
-                                            position: relative;
-                                            &:after {
-                                                position: absolute;
-                                                top: 45px;
-                                                left: 0px;
-                                                content: "";
-                                                width: 0;
-                                                height: 4.5px;
-                                                background: #724C99;
-                                            }
-                                            &:hover {
-                                                color: #724C99;
-                                                &:after {
-                                                    width: 100%;
-                                                }
-                                            }
-                                        }
-                                        .drop-down {
-                                            display: flex;
-                                            position: absolute;
-                                            flex-direction: column;
-                                            background: #fff;
-                                            color: #333;
-                                            border-radius: 4px;
-                                            opacity: 0;
-                                            visibility: hidden;
-                                            padding: 0;
-                                            li {
-                                                text-align: center;
-                                                width: 100%;
-                                                padding: 10px;
-                                                &:hover {
-                                                    background: #724C99;
-                                                    a {
-                                                        color: #fff;
-                                                    }
-                                                }
-                                                a {
-                                                    font-size: 16px;
-                                                    padding: 10px 0;
-                                                }
-                                                &:first-child {
-                                                    border-radius: 4px 4px 0px 0px;
-                                                }
-                                                &:last-child {
-                                                    border-radius: 0px 0px 4px 4px;
-                                                }
-                                            }
-                                        }
-                                    }
-                                    li.li-dropdown {
-                                        transition: 0.4s all;
-                                        position: relative;
-                                        &:hover {
-                                            a {
-                                                text-decoration: none;
-                                                text-align: center;
-                                            }
-                                            .drop-down {
-                                                opacity: 1;
-                                                visibility: visible;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                
-                .totop {
-                    width: 40px;
-                    height: 40px;
-                    background: #fff;
-                    color: #333;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    opacity: 0;
-                    position: fixed;
-                    bottom: -5px;
-                    right: 50px;
-                    z-index: 999;
-                    transition: 0.4s;
-                    border-radius: 50%;
-                    i {
-                        font-size: 22px;
-                        font-family: 700;
-                    }
-                    &.appear {
-                        opacity: 1;
-                        bottom: 60px;
-                    }
-                }
+@import "media";
+@import "grid";
+* {
+    margin: 0;
+    padding: 0;
+    li {
+        list-style: none;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background: #724C99;
+    .image {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.totop {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    position: fixed;
+    bottom: -5px;
+    right: 50px;
+    z-index: 999;
+    transition: 0.4s;
+    border-radius: 50%;
+    i {
+        font-size: 22px;
+        font-family: 700;
+    }
+    &.appear {
+        opacity: 1;
+        bottom: 60px;
+    }
+}
